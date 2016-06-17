@@ -1,0 +1,12 @@
+<h1>Your results <%= @artist_name %></h1>
+<% @artists.each do |artist| %>
+<a href="/artists/<%= artist.id %>">
+	<div>
+		<img src="<%= artist.avatar_url%>" alt="">
+	</div>
+	<div>
+		<h3><%= artist.name %></h3>
+		<p><%= artist.track_count %> tracks</p>
+	</div>
+</a>
+<% end %>

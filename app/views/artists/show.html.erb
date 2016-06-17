@@ -1,0 +1,13 @@
+<h1><%= @artist.name %></h1>
+<img  src="<%= @artist.avatar_url%>" alt="">
+
+<ul>
+	<% @tracks.each do |track| %>
+	<li>
+		<p><%= track.title %></p>
+		<a href="/tracks/<%= track.id %>">
+			Download
+		</a>
+	</li>
+	<% end %>
+</ul>
